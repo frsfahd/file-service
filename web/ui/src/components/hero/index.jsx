@@ -7,7 +7,8 @@ const Hero = ({ onChangeHandler, onSubmitHandler, selectedFile, inputKey }) => {
         <div className="max-w-full">
           <h1 className="text-5xl font-bold">Hello there</h1>
           <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+            This repo gives an example of implementation of gRPC operations (simple, server streaming, and client streaming) through a web-based file service.
+            Available features are list files, download, and upload.
           </p>
           <form onSubmit={onSubmitHandler}>
             <div className="join">
