@@ -1,4 +1,4 @@
-.PHONY: proto-go-gen proto-js-gen grpcui
+.PHONY: proto-go-gen proto-js-gen grpcui start-ui build-ui start-server start-web
 
 proto-go-gen:
 	protoc \
@@ -22,3 +22,15 @@ proto-js-gen:
 
 grpcui:
 	grpcui -plaintext -proto *.proto localhost:9000
+
+build-ui:
+	cd web/ui && npm run build
+
+start-ui:
+	cd web/ui && npm run dev
+
+start-server:
+	cd server/ && go run .
+
+start-web:
+	cd web/ && npm run start
